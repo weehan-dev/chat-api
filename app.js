@@ -10,8 +10,10 @@ import path from 'path';
 require('dotenv').config();
 
 import indexRouter from './routers';
+import mongodb from './models/mongoose';
 
 const app = express();
+mongodb();
 
 app.use(logger('dev'));
 app.use(express.json());
